@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8">
+    <title>Моя веб сторінка</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        h1 {
+            color: green;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div itemscope itemtype="https://schema.org/Movie">
+        <h2 itemprop="name" style="color: blue;">Yes Man</h2>
+
+        <h1 itemprop="name">Перший варіант</h1>
+        <h2 itemprop="name" style="color: blue;">Другий варіант</h2>
+        <h3 itemprop="name" id="header">Третій варіант</h3>
+
+        <span itemprop="director">Peyton Reed</span>
+        <span itemprop="genre">comedy</span>
+        <span itemprop="ratingValue" itemscope itemtype="http://shena.org/Rating">
+            Rating: <span itemprop="ratingValue">7.5
+            </span>
+            <span itemprop="description">
+                <!--Це завдання для третього уроку CSS-->
+                <p class="highlight">Carl Allen (Jim Carrey) is an unsociable person,
+                    answering “no” to all life’s questions, getting along very poorly with others.
+                    His wife left him, at work he always refuses bank clients to receive
+                    loans, and friends are gradually losing hope of getting him out even to his best friend’s wedding.
+                </p>
+            </span>
+            <button onclick="showMessage()">Click me</button>
+    </div>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.03608453594!2d-74.30933162340544!3d40.69753996075535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sua!4v1701175280747!5m2!1sru!2sua"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Fbe2Xbuv_pk?si=FhDtFQWTbU5gJf5q"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+    <iframe width="560" height="315" src="about.html" frameborder="0" allowfullscreen>
+    </iframe>
+
+
+</body>
+
+</html>

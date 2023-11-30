@@ -1,0 +1,23 @@
+span {
+    color: blue;
+    font-size: 15px;
+}
+
+h2 {
+    color: aqua;
+    font-family: 15px;
+}
+
+#header{
+    color: aquamarine;
+}
+
+p{
+    color:blue;
+    text-align: center;
+}
+
+.highlight{
+    color: green;
+    font-weight: bold;
+}
