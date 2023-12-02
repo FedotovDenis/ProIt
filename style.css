@@ -14,10 +14,43 @@ h2 {
 
 p{
     color:blue;
-    text-align: center;
+    
 }
 
 .highlight{
     color: green;
     font-weight: bold;
+}
+
+.center{
+    text-align: center;
+    color: red;
+}
+
+p#contents{
+    color: cadetblue;
+}
+
+a[title]{
+    text-decoration: underline dotted;
+}
+
+h1, h2, h3{
+    color: darkgreen;
+}
+
+article > p {
+    font-family: "Courier New", "Courier, monospace;
+}
+
+article p{
+    font-size: 18px;
+}
+
+h2 + p {
+    font-weight: bold;
+}
+
+h2 ~ p{
+    font-style: italic;
 }

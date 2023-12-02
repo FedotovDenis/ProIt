@@ -2,57 +2,125 @@
 <html lang="uk">
 
 <head>
-    <meta charset="utf-8">
-    <title>Моя веб сторінка</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
-    <style>
-        h1 {
-            color: green;
-        }
-    </style>
+    <meta charset="utf-8" />
 
+    <meta name="description"
+        content="Дізнайтеся, як спекти смачний торт з нуля з цим
+    простим і веселим посібником. Вам знадобляться деякі базові інгредієнти, інструменти та кроки, щоб зробити свій торт ідеальним." />
+    <meta name="keywords" content="торт, випічка, посібник, початківець, рецепт,
+    інгредієнти, кроки" />
+    <meta name="author" content="Denis Fedoyov" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/statue.jpg" />
+    <title>Як спекти торт - посібник для початківців</title>
 </head>
 
 <body>
+    <a href="#contact" title="Contact Us">Зв`яжіться з нами</a>
 
-    <div itemscope itemtype="https://schema.org/Movie">
-        <h2 itemprop="name" style="color: blue;">Yes Man</h2>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <caption>
+            This a caption
+        </caption>
+        <tr>
+            <th></th>
+            <th scope="col">Fruit</th>
+            <th scope="col">Color</th>
+        </tr>
+        <tr>
+            <th scope="row">Ukraine</th>
+            <td>Aple</td>
+            <td>Red</td>
+        </tr>
+        <tr>
+            <th scope="row">Brazil</th>
+            <td>Banana</td>
+            <td>Yellow</td>
+        </tr>
+        <tr>
+            <th scope="row">Israel</th>
+            <td colspan="2">Orange</td>
+        </tr>
+        <tr>
+            <th scope="row">USA</th>
+            <td rowspan="2">Cherry</td>
+            <td>Yellow</td>
+        </tr>
+        <tr>
+            <th scope="row">Canada</th>
+            <td>Red</td>
+        </tr>
+    </table>
 
-        <h1 itemprop="name">Перший варіант</h1>
-        <h2 itemprop="name" style="color: blue;">Другий варіант</h2>
-        <h3 itemprop="name" id="header">Третій варіант</h3>
+    <h1>Header</h1>
 
-        <span itemprop="director">Peyton Reed</span>
-        <span itemprop="genre">comedy</span>
-        <span itemprop="ratingValue" itemscope itemtype="http://shena.org/Rating">
-            Rating: <span itemprop="ratingValue">7.5
-            </span>
-            <span itemprop="description">
-                <!--Це завдання для третього уроку CSS-->
-                <p class="highlight">Carl Allen (Jim Carrey) is an unsociable person,
-                    answering “no” to all life’s questions, getting along very poorly with others.
-                    His wife left him, at work he always refuses bank clients to receive
-                    loans, and friends are gradually losing hope of getting him out even to his best friend’s wedding.
-                </p>
-            </span>
-            <button onclick="showMessage()">Click me</button>
+    <article>
+
+    <p class="center">
+        Visual Studio Code (VS Code) is more than a standard code editor—it's an
+        integrated development environment (IDE), packed with a lot of features
+        right out of the box. As a technical writer for MDN, I use VS Code
+        primarily for writing documentation in Markdown. When I started using VS
+        Code, I discovered a lot of features I could use right away. Although it
+        is simple to use, knowing a few extra features and extensions can help you
+        get things done faster, whether you're coding, writing, or doing both.
+        This article provides a beginner's overview, taking you through some
+        practical tips, interesting features, including the built-in Git
+        capabilities, and a few and extensions, that can enhance your VS Code
+        experience. I'm excited to share the tricks and tools I've learned that
+        will be beneficial for those just starting out. Keyboard shortcuts Let's
+        explore some keyboard shortcuts that can make navigation and editing in VS
+        Code quicker. Many of these shortcuts are also supported in other editors.
+        For example, if you're familiar with Sublime Text, you'll find that most
+        of the shortcuts are quite similar. Learning these shortcuts can help you
+        work faster in VS Code, and they'll also be useful if you switch to or use
+        another editor.
+    </p>
+    <p>
+        Customizing shortcuts If some of the shortcuts listed above don't work for
+        you, check your Keyboard Shortcuts settings. You can access the settings
+        by pressing Command + K, then Command + S on macOS or by using the menu
+        Code > Settings > Keyboard Shortcuts (as of Version 1.83.1). You might
+        notice that a different key combination is set up for a particular action,
+        or you might need to set up a new shortcut. You can customize the keyboard
+        shortcuts to suit your style and needs.
+    </p>
+    <p>
+        Using Zen Mode I learned about Zen Mode while writing this article. I find
+        this feature similar to the Pageless feature in Google Docs. You can
+        activate Zen Mode via Command + K, Z on macOS (View > Appearance > Zen
+        Mode). o exit, use the same key combination or press Esc twice. You might
+        like this mode if you prefer your working area to be clutter- or
+        distraction-free.
+    </p>
+    <img align="right" border="5" src="https://picsum.photos/200/300/" />
+    <p id="contents">
+        Personal favorite The shortcut I like the most is Command + D because it
+        allows me to select multiple occurrences of a word or a phrase and edit
+        them all in-place simultaneously. For example, to make multiple
+        occurrences of a keyword bold, I use this key combination to select them,
+        then type two asterisks. VS Code will automatically place an asterisk on
+        either side of each selected word (see the Surrounding characters
+        feature), making them bold. This is often faster than using the
+        traditional "Find and Replace" utility, especially when working with a
+        smaller number of occurrences in the visible frame. "Find and Replace" can
+        help when you're handling bulk replacements or when you need to perform a
+        regex search.
+    </p>
+    <div>
+    <p>
+        Summary In this article, you learned about how VS Code can help make your
+        work easier and faster, whether you're writing code or documentation. We
+        looked at shortcuts, extensions like GitLens, and other built-in Git
+        features that can speed up your work.
+    </p>
     </div>
+    </article>
 
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.03608453594!2d-74.30933162340544!3d40.69753996075535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sua!4v1701175280747!5m2!1sru!2sua"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Fbe2Xbuv_pk?si=FhDtFQWTbU5gJf5q"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-    </iframe>
-    <iframe width="560" height="315" src="about.html" frameborder="0" allowfullscreen>
-    </iframe>
-
-
+    <h2 id="contact">Зв`яжіться з нами</h2>
+    <p>Завжди раді Вам</p>
+    <p>Test</p>
+    <a href="mailto:myemail@gmail.com">Надішліть нам листа</a>
 </body>
 
 </html>
