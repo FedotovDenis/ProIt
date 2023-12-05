@@ -56,22 +56,43 @@ h2 ~ p{
 }
 
 
-/* Це домашне завдання урок 5 */
+/* Це домашне завдання урок 5 
 .foto img {
     width: 200px;
     height: 200px;
-
+*/
 
 /* Це урок #6 */
 
     /*box-sizing: border-box;*/
-    margin: 20px;
+    /*margin: 20px;
     padding: 25px;
-    /*border: 2px dashed black;*/
+    /*border: 2px dashed black;
     border-radius: 50px;
     background: url(images/unsplash.jpg);
     background-size: cover;
+    position: sticky;
+    top: 10px;
+    
 }
+ */
+
+/* Це домашне завдання урок 8 */
+.foto img {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 50px;
+    background: url(images/unsplash.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    
+}
+
+
 
 /* Це домашне завдання урок #6 
 .button{
