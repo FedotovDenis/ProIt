@@ -149,6 +149,17 @@ button:hover {
 }
 */
 
+/* Це домашне завдання урок #11 */
+.box{
+    width: 30%; 
+    float: left; 
+    border-radius: 35px; 
+    padding: 10px;
+    height: 1100px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
 
 
 
