@@ -160,6 +160,13 @@ button:hover {
     overflow-y: scroll;
 }
 
+/* Практичне завдання #12*/
+.zindex{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+
 
 
 
