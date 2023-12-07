@@ -159,16 +159,31 @@ button:hover {
     overflow-x: hidden;
     overflow-y: scroll;
 }
-
-/* Практичне завдання #12*/
+/*
+/* Практичне завдання #12
 .zindex{
     width: 200px;
     height: 200px;
     position: absolute;
 }
+*/
 
 
+body{
+    
+    background-image: url("images/background1.jpg");
+    background-size: cover;
+    background: linear-gradient(green, darkblue);
+}
 
+/* Практичне завдання CSS урок #13*/
+.backgraund{
+    background-color: green;
+    background-image: url('images/example.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
 
 
