@@ -12,10 +12,6 @@ h2 {
     color: aquamarine;
 }
 
-p{
-    color:blue;
-    
-}
 
 .highlight{
     color: green;
@@ -24,12 +20,9 @@ p{
 
 .center{
     text-align: center;
-    color: red;
+    color: black;
 }
 
-p#contents{
-    color: cadetblue;
-}
 
 a[title]{
     text-decoration: underline dotted;
@@ -38,44 +31,6 @@ a[title]{
 h1, h2, h3{
     color: darkgreen;
 }
-
-article > p {
-    font-family: "Courier New", "Courier, monospace;
-}
-
-article p{
-    font-size: 18px;
-}
-
-h2 + p {
-    font-weight: bold;
-}
-
-h2 ~ p{
-    font-style: italic;
-}
-
-
-/* Це домашне завдання урок 5 
-.foto img {
-    width: 200px;
-    height: 200px;
-*/
-
-/* Це урок #6 */
-
-    /*box-sizing: border-box;*/
-    /*margin: 20px;
-    padding: 25px;
-    /*border: 2px dashed black;
-    border-radius: 50px;
-    background: url(images/unsplash.jpg);
-    background-size: cover;
-    position: sticky;
-    top: 10px;
-    
-}
- */
 
 /* Це домашне завдання урок 8 */
 .foto img {
@@ -95,20 +50,7 @@ h2 ~ p{
 
 
 
-/* Це домашне завдання урок #6 
-.button{
-    background-color: green;
-    color: white;
-    padding-top: 20px;
-    padding-right: 40px;
-    padding-bottom: 20px;
-    padding-left: 40px;
-    border: none;
-    font-size: 16px;
-    border-radius: 10px;
-    display: block;
-}
-*/
+
 
 /* Це домашне завдання урок #7 */
 .button{
@@ -143,11 +85,6 @@ h2 ~ p{
 
 
 
-/*
-button:hover {
-    background-color: darkblue; 
-}
-*/
 
 /* Це домашне завдання урок #11 */
 .box{
@@ -159,31 +96,31 @@ button:hover {
     overflow-x: hidden;
     overflow-y: scroll;
 }
-/*
-/* Практичне завдання #12
-.zindex{
-    width: 200px;
-    height: 200px;
-    position: absolute;
-}
-*/
+
+
 
 
 body{
     
     background-image: url("images/background1.jpg");
     background-size: cover;
-    background: linear-gradient(green, darkblue);
+    background: linear-gradient(rgb(231, 234, 192), darkblue);
 }
 
 /* Практичне завдання CSS урок #13*/
 .backgraund{
-    background-color: green;
+    background-color: rgb(219, 232, 219);
     background-image: url('images/example.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-
-
+/* Практичне завдання CSS урок #14*/
+p{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.6;
+}
