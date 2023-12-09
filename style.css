@@ -28,6 +28,10 @@ a[title]{
     text-decoration: underline dotted;
 }
 
+a[title]:hover{
+    color: green;
+}
+
 h1, h2, h3{
     color: darkgreen;
 }
@@ -61,7 +65,10 @@ h1, h2, h3{
     font-size: 16px;
     border-radius: 10px;
     display: inline-block;
-    box-shadow: 15px 18px 15px 5px rgb(126, 164, 126);
+}
+
+.button:hover{
+    box-shadow: 15px 18px 15px 5px rgb(100, 101, 100);
 }
 
 .Customizing{
@@ -134,9 +141,18 @@ p{
     padding: 15px;
 }
 
+
 /* Практичне завдання CSS урок #15*/
 .title{
     text-transform: capitalize;
     text-align: center;
     text-decoration: underline dashed red;
+}
+
+
+/* Практичне завдання CSS урок #17*/
+p:hover{
+    text-align: justify;
+    padding: 15px;
+    color: blue;
 }
