@@ -52,7 +52,7 @@ h1, h2, h3{
 
 
 
-/* Це домашне завдання урок #7 */
+/* Це урок #15 */
 .button{
     background-color: green;
     color: white;
@@ -60,7 +60,8 @@ h1, h2, h3{
     border: none;
     font-size: 16px;
     border-radius: 10px;
-    display: block;
+    display: inline-block;
+    box-shadow: 15px 18px 15px 5px rgb(126, 164, 126);
 }
 
 .Customizing{
@@ -107,13 +108,16 @@ body{
     background: linear-gradient(rgb(231, 234, 192), darkblue);
 }
 
-/* Практичне завдання CSS урок #13*/
+/* Практичне завдання CSS урок #15*/
 .backgraund{
     background-color: rgb(219, 232, 219);
     background-image: url('images/example.jpg');
     background-repeat: no-repeat;
-    background-position: center;
+    border-radius: 35px;
+    background-position: right;
     background-size: cover;
+    box-shadow: 5px 10px blue,
+          inset -3px -5px red;
 }
 
 /* Практичне завдання CSS урок #14*/
