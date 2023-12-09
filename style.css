@@ -124,3 +124,15 @@ p{
     font-weight: 700;
     line-height: 1.6;
 }
+
+.center{
+    text-align: justify;
+    padding: 15px;
+}
+
+/* Практичне завдання CSS урок #15*/
+.title{
+    text-transform: capitalize;
+    text-align: center;
+    text-decoration: underline dashed red;
+}
