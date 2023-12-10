@@ -56,20 +56,29 @@ h1, h2, h3{
 
 
 
-/* Це урок #15 */
+/* Це домашне завдання урок #18 */
 .button{
-    background-color: green;
+    background-color: red;
     color: white;
     padding: 20px 40px 20px 40px;
     border: none;
     font-size: 16px;
     border-radius: 10px;
     display: inline-block;
+    transition: padding 0.5s, 
+                background-color 0.5s;
 }
-
 .button:hover{
-    box-shadow: 15px 18px 15px 5px rgb(100, 101, 100);
+    padding: 20px 60px;
+    background-color: yellow;
 }
+/* Це домашне завдання урок #18 */
+
+
+
+
+
+
 
 .Customizing{
     background-color: blue;
