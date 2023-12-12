@@ -51,34 +51,6 @@
     transform: scale(1.5);
 }
 
-/* Це домашне завдання урок #18 */
-
-
-
-
-
-
-
-.Customizing{
-    background-color: blue;
-    color: white;
-    padding: 20px 40px 20px 40px;
-    border: none;
-    font-size: 16px;
-    border-radius: 10px;
-    display: inline;
-}
-
-.Using{
-    background-color: blueviolet;
-    color: white;
-    padding: 20px 40px 20px 40px;
-    border: none;
-    font-size: 16px;
-    border-radius: 10px;
-    display: inline-block;
-}
-
 
 
 
@@ -103,7 +75,7 @@ body{
     border-radius: 35px;
     background-position: right;
     background-size: cover;
-    box-shadow: 5px 10px blue,
+    box-shadow: 5px 10px blue
           inset -3px -5px red;
 }
 
@@ -134,7 +106,10 @@ p{
 p:hover{
     text-align: justify;
     padding: 15px;
+
+    /*робить колір синім при наведенні
     color: blue;
+    */
 }
 
 /* Практичне завдання CSS урок #18*/
@@ -207,7 +182,7 @@ p:hover{
     }
 }
 
-/* Практичне завдання CSS урок #21*/
+/* Практичне завдання CSS урок #21
 .ball {
     width: 100px;
     height: 100px;
@@ -218,5 +193,114 @@ p:hover{
 .ball:hover {
     transform: scale(2) rotate(90deg);
 }
+*/
 
 
+/* Практичне завдання CSS урок #22
+Використання правила @keyframes для 
+створення користувацьких анімацій*/
+@keyframes fadeIn{
+    /*Початкові стилі*/
+    0% {opacity: 0;}
+    
+    /*Середні стилі*/
+    50% {opacity: 1;}
+    
+    /*Кінцеві стилі*/
+    100% {opacity: 3;}
+}
+/*Застосовуємо @keyframes для table*/
+table{
+    /*Підключаєм fadeIn*/
+    animation-name: fadeIn;
+    
+    /*Час відображення*/
+    animation-duration: 5s;
+}
+
+/*Ця анімація bounce моделює ефект відскоку*/
+/*Створюємо м`яч з класом ball*/
+.ball{
+/*Задаємо ширену та висоту*/
+    width: 150px;
+    height: 150px;
+
+    /*Задаємо колір*/
+    background-color: blue;
+
+    /*Ребемо  м`яч круглим*/
+    border-radius: 50%;
+
+    /*Задаємо ім`я*/
+    animation-name: bounce;
+
+    /*Задаємо 2 секунди для анімації*/
+    animation-duration: 2s;
+
+    /*Анімація буде повторюватис не скінчено*/
+    animation-iteration-count: infinite;
+
+    /*Змінюємо напрямок анімації*/
+    animation-direction: alternate;
+
+    /*Гарантує що анімація зберігає свфй стан після завершення, 
+    це буде застосованно як що 
+    відключити властивість animation-iteration-count: infinite*/
+    animation-fill-mode: forwards;
+
+    /*Підключаємо анімацію кольору з назваю colorChange*/
+    animation: colorChange 5s infinite;
+}
+
+@keyframes bounce {
+    /*Елемент починає зі своєї початкової позиції*/
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    
+    /*переміщується вгору на 30 пікселів*/
+    40% { transform: translateY(-30px); }
+    
+    /*потім трохи опускається і, нарешті,
+повертається до своєї вихідної позиції.*/
+    60% { transform: translateY(-15px); }
+}
+
+/*Ця анімація bounce моделює ефект зміни кольору*/
+/* Визначаємо анімаційний ключовий фрейм colorChange. */
+@keyframes colorChange {
+    /* Початковий стан (0%) - фон червоний. */
+    0% { background-color: red; }
+
+    /* Стан на середині анімації (50%) - фон стає синім. */
+    50% { background-color: blue; }
+
+    /* Кінцевий стан (100%) - фон стає зеленим. */
+    100% { background-color: green; }
+}
+
+/* Домашне завдання CSS урок #22 
+   Створіть код для анімації, 
+   яка змінює колір тексту елемента з чорного 
+   на білий протягом 4 секунд*/
+   .animation {
+    /* Задаємо ім'я анімації, яке визначене нижче */
+    animation-name: animationColor;
+    
+    /* Тривалість анімації - 4 секунди */
+    animation-duration: 4s;
+
+    /* Кількість повторень анімації (безкінечно в даному випадку) */
+    animation-iteration-count: infinite;
+}
+
+/* Описуємо анімаційний ключовий кадр */
+@keyframes animationColor {
+    /* Початковий стан (0%) - колір тексту чорний */
+    0% {
+        color: black;
+    }
+    
+    /* Кінцевий стан (100%) - колір тексту білий */
+    100% {
+        color: white;
+    }
+}
