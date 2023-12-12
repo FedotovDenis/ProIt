@@ -1,0 +1,61 @@
+.container {
+    
+    /*активуємо сітковий макет.*/
+    display: grid;
+
+    /* Тут вказуємо, що маємо три колонки, кожна з яких має розмір від 100px до 200px */
+    grid-template-columns: repeat(3, minmax(100px, 200px));
+
+    /* Вказуємо, яку частину має займати кожна область в контейнері */
+    grid-template-areas:
+        "header header header"
+        "main main aside"
+        "footer footer footer"
+    ;
+
+    /* Визначаємо розміри стовпців і їхню пропорцію (це перший варіант) */
+    /* grid-template-columns: 2fr 1fr; */
+
+    /* Простір між усіма елементами 16px (це перший варіант) */
+    /* gap: 16px; */
+}
+
+header {
+    /* Вказуємо, що елемент header має займати всі стовпці (це перший варіант) */
+    /* grid-column: 1 / -1; */
+
+    /* Вказуємо, яку область в контейнері має займати елемент header */
+    grid-area: header;
+
+    background-color: darkcyan;
+}
+
+main {
+    /* Вказуємо, що елемент main має займати перші два стовпці (це перший варіант) */
+    /* grid-column: 1 / 3; */
+
+    /* Вказуємо, яку область в контейнері має займати елемент main */
+    grid-area: main;
+
+    background-color: darkgray;
+}
+
+aside {
+    /* Вказуємо, що елемент aside має займати третій стовпець (це перший варіант) */
+    /* grid-column: 3 / 3; */
+
+    /* Вказуємо, яку область в контейнері має займати елемент aside */
+    grid-area: aside;
+
+    background-color: lightgrey;
+}
+
+footer {
+    /* Вказуємо, що елемент footer має займати всі стовпці (це перший варіант) */
+    /* grid-column: 1 / -1; */
+
+    /* Вказуємо, яку область в контейнері має займати елемент footer */
+    grid-area: footer;
+
+    background-color: lightcyan;
+}
