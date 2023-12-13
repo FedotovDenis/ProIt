@@ -1,0 +1,144 @@
+<!--
+CSS урок #26
+Використання CSS-фреймворків, таких як Bootstrap або Foundation --
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Установка основных мета-тегов и подключение стилей Bootstrap 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Signup page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Навигационное меню --
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand">My Portfolio</a>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link">About</a></li>
+            <li class="nav-item"><a class="nav-link">Projects</a></li>
+            <li class="nav-item"><a class="nav-link">Skills</a></li>
+            <li class="nav-item"><a class="nav-link">Contacts</a></li>
+        </ul>
+    </nav>
+    <!-- Контейнер для содержимого страницы 
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Левая колонка с фотографией и информацией -
+            <div class="col-3 bg-light sticky-top">
+                <img class="d-block mx-auto rounded" src="images/Denis.jpg" width="100" alt="This is my photo">
+                <h4 class="mt-4 text-center">Denis Fedotov</h4>
+                <p class="text-center">I'm studying to be a Full Stack Engineer</p>
+            </div>
+            <!-- Правая колонка с формой регистрации --
+            <div class="col-sm p-3 min-vh-100">
+                <h2>Registration Form</h2>
+                <form>
+                    <!-- Поля для ввода имени, почты, пароля и даты рождения --
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" placeholder="Enter Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" class="form-control" id="dob">
+                    </div>
+                    <!-- Поле для выбора пола --
+                    <div class="form-group">
+                        <label>Gender</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <!-- Поле для ввода биографии --
+                        <div class="form-group">
+                            <label for="bio">Bio</label>
+                            <textarea class="form-control" id="bio" rows="3"></textarea>
+                        </div>
+                        <!-- Поле для подтверждения согласия с условиями --
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="terms">
+                            <label class="form-check-label" for="terms">Accept Terms and Conditions</label>
+                        </div>
+                        <!-- Кнопка отправки формы --
+                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Нижний колонтитул --
+    <footer class="bg-dark text-white text-center mt-4 py-3">
+        <p>&copy; 2024 Bootstrap Demo</p>
+    </footer>
+</body>
+</html>
+-->
+
+<!--Домашне завдання CSS урок #26
+Створіть веб-сторінку використовуючи Bootstrap або Foundation. 
+Ваша сторінка повинна містити навігаційну панель, форму входу та секцію "Про нас". 
+Зверніть увагу на адаптивність та сумісність з браузерами.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Встановлення основних мета-тегів та підключення стилів Bootstrap -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Signup page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Контейнер для содержимого страницы -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Левая колонка с фотографией и информацией -->
+            <div class="col-3 bg-light sticky-top">
+                <img class="d-block mx-auto" src="images/Denis.jpg" width="100" alt="This is my photo">
+                <h4 class="mt-4 text-center">Denis Fedotov</h4>
+                <p class="text-center">I'm studying to be a Full Stack Engineer</p>
+            </div>
+            <!-- Правая колонка с формой регистрации -->
+            <div class="col-sm p-3 min-vh-100">
+                <h2>Registration Form</h2>
+    <!-- Навігаційне меню -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand">My Portfolio</a>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link">About</a></li>
+            <li class="nav-item"><a class="nav-link">Projects</a></li>
+            <li class="nav-item"><a class="nav-link">Skills</a></li>
+            <li class="nav-item"><a class="nav-link">Contacts</a></li>
+        </ul>
+    </nav>
+    <div class="col-sm p-3 min-vh-100">
+        <h2>Registration Form</h2>
+        <form>
+            <!-- Поля для ввода имени, почты, пароля и даты рождения -->
+            <div class="form-group">
+                <label for="login">Login</label>
+                <input type="text" class="form-control" id="login" placeholder="Login">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+            </div>
+                <!-- Кнопка отправки формы -->
+                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            </div>
+        </form>
+        <footer class="bg-dark text-white text-center mt-4 py-3">
+            <p>&copy; 2024 Bootstrap Demo</p>
+        </footer>
+    </body>
+    </html>
