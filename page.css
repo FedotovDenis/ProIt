@@ -1,5 +1,5 @@
 .container {
-    
+
     /*активуємо сітковий макет.*/
     display: grid;
 
@@ -58,4 +58,22 @@ footer {
     grid-area: footer;
 
     background-color: lightcyan;
+}
+
+
+/*Домашне завдання CSS урок #24
+Напишіть CSS код для властивості, що змінює колір тексту, таким чином, 
+щоб врахувати можливу підтримку різних браузерів 
+з використанням виробничих префіксів.*/
+.prefix{
+
+    /* Стандартне визначення коліру тексту */
+color: palegreen;
+
+-webkit-transform: palegreen; /* Chrome, Safari, Opera */
+-moz-transform: palegreen; /* Firefox */
+-ms-transform: palegreen; /* Internet Explorer */
+-o-transform: palegreen; /* Старіші версії Opera */
+transform: palegreen; /* Стандартний синтаксис */
+
 }
