@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*
+      Домашне завдання урок №40
+      Візьміть наведений вище HTML та CSS код і модифікуйте стиль
+      для елемента `<aside>`, щоб він займав дві колонки та один ряд.
+      Напишіть необхідний CSS код для цього.
+    */
+
+    /*
+      Елемент `<aside>` займає дві колонки та один ряд.
+      Для цього ми змінили значення властивості `grid-template-columns`
+      елемента `.container` на `1fr 1fr`.
+    */
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
+
+    /*
+      За допомогою властивості `grid-column` ми вказуємо, що елемент
+      `.aside` повинен відображатися в першій і другій колонці.
+    */
+    .aside {
+      grid-column: 1 / 3;
+    }
+
+    /*
+      За допомогою властивості `background-color` ми встановлюємо колір фону
+      для кожного елемента.
+    */
+    header {
+      background-color: lightblue;
+    }
+
+    main {
+      background-color: lightgreen;
+    }
+
+    aside {
+      background-color: lightpink;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>My Website</h1>
+    </header>
+    <main>
+      <p>This is the main content of my website</p>
+    </main>
+    <aside>
+      <p>This is the sidebar of my Website</p>
+    </aside>
+  </div>
+</body>
+</html>
