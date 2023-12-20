@@ -219,24 +219,67 @@ console.log(fruits);
 
 */
 
+
+
+
+
+
 /*
 Домашнє завдання урок №6
 Створюємо масив `vegetables` з елементами "carrot", "potato", "cucumber".
-*/
+
 let vegetables = ["carrot", "potato", "cucumber"];
 
 /*
 Додаємо елемент "tomato" до кінця масиву `vegetables`.
-*/
+*
 vegetables.push('tomato');
 
 /*
 Видаляємо перший елемент масиву `vegetables`.
-*/
+*
 vegetables.shift();
 
 /*
 Виводимо масив `vegetables` на консоль.
-*/
+*
 console.log(vegetables);
+*/
 
+
+
+
+
+/*
+Урок №7 Функції
+/*
+Функція `sayHello()` виводить повідомлення "Hello World" на консоль.
+*
+function sayHello() {
+    // Виводимо повідомлення "Hello World" на консоль.
+    console.log('Hello World');
+  }
+  
+  sayHello();
+  */
+
+
+  /*
+  Домашнє завдання урок №7
+  Напишіть функцію на JavaScript, 
+  яка приймає два числові параметри та повертає їхню суму. 
+  Після цього викличте цю функцію, 
+  передавши їй два числа на ваш вибір, 
+  та виведіть результат у консоль.
+  */
+  
+  /*
+  Функція `num()` приймає два числові параметри `a` і `b` і повертає їхню суму.
+  */
+  function num(a, b) {
+    // Повертає суму двох параметрів.
+    return a + b;
+  }
+  
+  console.log(num(5, 10));
+  
