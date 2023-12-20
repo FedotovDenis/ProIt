@@ -169,8 +169,74 @@ for (let i = 0; i < 5; i++) {
 /*
 Домашнє завдання урок №5
 Напишіть фрагмент коду на JavaScript, який використовує цикл `for`, щоб вивести на консоль числа від 1 до 10.
-*/
+
 
 for (let i = 1; i <= 10; i++) {
     console.log(i);
 }
+
+*/
+
+
+
+/*
+// Урок №6
+
+/*
+Створюємо масив `fruits` з елементами "apple", "banana", "cherry".
+*
+let fruits = ['apple', 'banana', 'cherry'];
+
+/*
+Отримуємо перший елемент масиву `fruits`.
+*
+let firstFruit = fruits[0];
+
+/*
+Додаємо елемент "orange" до кінця масиву `fruits`.
+*
+fruits.push('orange');
+
+/*
+Отримуємо останній елемент масиву `fruits`.
+*
+let removedFruit = fruits.pop();
+
+/*
+Отримуємо перший елемент масиву `fruits` і видаляємо його.
+*
+let firstRemoved = fruits.shift();
+
+/*
+Додаємо елемент "grape" на початок масиву `fruits`.
+*
+fruits.unshift('grape');
+
+/*
+Виводимо масив `fruits` на консоль.
+*
+console.log(fruits);
+
+*/
+
+/*
+Домашнє завдання урок №6
+Створюємо масив `vegetables` з елементами "carrot", "potato", "cucumber".
+*/
+let vegetables = ["carrot", "potato", "cucumber"];
+
+/*
+Додаємо елемент "tomato" до кінця масиву `vegetables`.
+*/
+vegetables.push('tomato');
+
+/*
+Видаляємо перший елемент масиву `vegetables`.
+*/
+vegetables.shift();
+
+/*
+Виводимо масив `vegetables` на консоль.
+*/
+console.log(vegetables);
+
