@@ -290,7 +290,7 @@ console.log(num(5, 10));
 /*
 Урок №9
 Як використовувати параметри функцій та повернені значення
-*/
+
 function greet(name) {
     console.log('Hello, ' + name + '!');
 }
@@ -314,6 +314,7 @@ function checkAge(age) {
         return "You are a minor"
     }
 }
+*/
 
 /*
 Домашнє завдання урок №7
@@ -321,38 +322,135 @@ function checkAge(age) {
 чи є це число парним чи непарним. Функція повинна повертати рядок "Парне"
 для парних чисел і "Непарне" для непарних. Потім викличте цю функцію з
 декількома різними числами та виведіть результати.
-*/
+
 
 /*
 Функція `numberIsEven()` приймає числовий параметр `num` і перевіряє,
 чи є це число парним.
-*/
+*
 function numberIsEven(num) {
 
     /*
     Оператор `%` повертає залишок від ділення числа `num` на 2. Якщо залишок
     дорівнює 0, то число є парним.
-    */
+    *
     if (num % 2) {
   
       /*
       Якщо число непарне, функція повертає рядок "Число є непарним".
-      */
-      return "Число є непарним";
+      *
+      return "Число є парним";
     } else {
   
       /*
       Якщо число парне, функція повертає рядок "Число є парним".
-      */
-      return "Число є парним";
+      *
+      return "Число є непарним";
     }
   }
   
   /*
   Функція `console.log()` виводить рядок `3` на консоль.
-  */
+  *
   console.log(numberIsEven(2));
   console.log(numberIsEven(3));
   console.log(numberIsEven(1000));
-  
+*/
+
+
+
+
+
+/*
+Урок №9
+Як працювати з об'єктами та методами об'єктів, 
+такими як Object.keys та Object.values
+
+
+// Створюємо об'єкт phone з властивостями brand, color та weight
+let phone = {
+    brand: 'Iphone',
+    color: 'Black',
+    weight: 143
+};
+
+// Використовуємо метод Object.keys для отримання масиву ключів об'єкта phone
+let keys = Object.keys(phone);
+console.log(keys);
+
+// Використовуємо метод Object.values для отримання масиву значень об'єкта phone
+let value = Object.values(phone);
+console.log(value);
+
+// Додаємо нову властивість screenSize та змінюємо значення властивості color об'єкта phone
+phone.screenSize = '6 inches';
+phone.color = 'white';
+console.log(phone);
+
+// Видаляємо властивість weight об'єкта phone
+delete phone.weight;
+console.log(phone);
+
+
+// Створюємо об'єкт person з властивостями name, year, hobbies та adress
+let person = {
+    name: 'Alice',
+    year: 1980,
+    hobbies: ['reading', 'cooking', 'traveling'],
+    adress: {
+        street: '123 Main st.',
+        city: 'New York',
+        state: 'NY',
+        zip: '1000'
+    },
+
+    // Створюємо метод calculateAge, який приймає рік і повертає вік особи
+    calculateAge: function(year_now){
+        return year_now - this.year;
+    }
+};
+
+// Виводимо значення властивості name об'єкта person
+console.log(person.name);
+
+// Виводимо значення властивості name об'єкта person, використовуючи квадратні дужки
+console.log(person['name']);
+
+// Використовуємо змінну key для отримання значення властивості adress об'єкта person
+let key = 'adress';
+console.log(person[key]);
+
+// Виводимо значення властивості street об'єкта adress, який є властивістю об'єкта person
+console.log(person.adress.street);
+
+// Викликаємо метод calculateAge об'єкта person і передаємо поточний рік для обчислення віку
+let age = person.calculateAge(2023)
+console.log(age);
+
+// Використовуємо цикл for...in для виведення всіх властивостей об'єкта person
+for (let key in person){
+    console.log(key + ':' + person[key]);
+}
+*/
+
+
+/*
+Домашнє завдання урок №9
+Створіть об'єкт з назвою `student`, 
+що містить властивості `name` (рядок), `age` (число) та `subjects` (масив рядків). 
+Додайте метод `displayInfo`, який виводить інформацію про студента у консоль у форматі: 
+"Студент [ім'я] віком [вік] вивчає [предмети]". Використовуйте `this` 
+для доступу до властивостей об'єкта у методі
+*/
+
+let student = {
+  name: 'Bob', // Властивість з ім'ям студента
+  age: 20, // Властивість з віком студента
+  subjects: ['math', 'literature', 'painting'], // Властивість з масивом предметів, які студент вивчає
+  displayInfo: function() { // Метод displayInfo, який виводить інформацію про студента
+    console.log(`Студент ${this.name} віком ${this.age} вивчає ${this.subjects}.`);
+  }
+};
+
+student.displayInfo(); // Виклик методу displayInfo для виведення інформації про студента у консоль
 
