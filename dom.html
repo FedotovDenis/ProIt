@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+</head>
+
+<body>
+    <h1 id="main">Hello World</h1>
+    <p>This is a paragraph 1</p>
+    <p>This is a paragraph 2</p>
+    <p>This is a paragraph 3</p>
+    <ul>
+        <li class="item">Item 1</li>
+        <li class="item">Item 1</li>
+        <li class="item">Item 1</li>
+    </ul>
+    <script>
+        // Змінюємо текст заголовка з id "main" на "Hello Dom"
+        let mainHeading = document.querySelector("#main");
+        mainHeading.textContent = "Hello Dom";
+
+        // Змінюємо фоновий колір всіх елементів з класом "item" на жовтий
+        let items = document.querySelectorAll(".item");
+        for (let item of items) {
+            item.style.backgroundColor = "yellow";
+        }
+
+
+        /* 
+        Домашнє завдання урок №14
+        Напишіть код JavaScript, який знаходить всі елементи `<p>` на сторінці та 
+        змінює їх колір тексту на синій. Використовуйте метод `document.querySelectorAll()` та цикл для внесення змін.
+        */
+
+        // Знаходимо всі елементи <p> на сторінці та змінюємо колір тексту на синій
+        let paragraphs = document.querySelectorAll("p");
+        for (let paragraph of paragraphs) {
+            paragraph.style.color = "blue";
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>
