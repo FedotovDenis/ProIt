@@ -649,11 +649,70 @@ const multiplay = (a, b) => a * b;
 Домашнє завдання урок №12
 Напишіть стрілкову функцію, яка приймає масив 
 чисел та повертає масив цих же чисел, піднесених до квадрату.
-*/
+
 const massifNumbers1 = arrayNumbers => {
   return arrayNumbers.map(number => number * number);
 }
 console.log(massifNumbers1([1, 2, 3, 4, 5]));
+*/
+
+
+
+/*
+Урок №13
+Як використовувати шаблонні літерали для створення динамічних рядків
+
+
+// Змінні x і y для демонстрації використання шаблонних літералів
+let x = 5;
+let y = 1000;
+
+// Використання шаблонного літерала для створення рядка, який містить суму змінних x і y
+let sum = `The sum of ${x} and ${y} is ${x + y}`;
+console.log(sum);
+
+// Об'єкт person з даними про особу для демонстрації використання шаблонних літералів
+let person = {
+  name: 'Bob',
+  age: 30,
+  occupation: 'teacher'
+};
+
+// Використання шаблонного літерала для створення рядка, який представляє інформацію про особу
+let introduction = `My name is ${person.name}, I am ${person.age} years old, and I work as a ${person.occupation}`;
+console.log(introduction);
+*/
+
+
+
+/*
+Домашнє завдання урок №12
+Напишіть функцію на JavaScript, яка приймає об'єкт з інформацією 
+про студента (ім'я, вік, спеціальність) та повертає рядок, сформований 
+за допомогою шаблонного літерала, який представляє 
+цю інформацію у зрозумілому форматі.
+*/
+
+// Функція formatStudentInfo, яка форматує рядок з інформацією про студента
+function formatStudentInfo(student) {
+  return `Student ${student.name}, age ${student.age}, studies in the specialty ${student.specialty}.`;
+}
+
+// Об'єкт student з інформацією про студента
+const student = {
+  name: 'Bob',
+  age: 20,
+  specialty: 'programmer'
+};
+
+// Виклик функції formatStudentInfo і збереження результату у змінну formattedInfo
+const formattedInfo = formatStudentInfo(student);
+
+// Виведення отриманого рядка на консоль
+console.log(formattedInfo);
+
+
+
 
 
 
