@@ -7,7 +7,14 @@ function great() {
 let age;
 age = 'Hi';
 console.log(age);
+
+
+const { json } = require("express/lib/response");
 */
+
+// const { application } = require("express");
+
+// const { response } = require("express");
 
 /*
 Домашнє завдання урок №3
@@ -720,13 +727,663 @@ console.log(formattedInfo);
 */
 
 
+/*
+Урок №18
+Як використовувати зворотні виклики та функції вищого порядку 
+
+
+
+// Функція `greeting` приймає параметр `name` і виводить привітання у консолі з використанням шаблонних рядків.
+function greeting(name) {
+  console.log(`Hello, ${name}`);
+};
+// Функція `greetWithAlert` приймає параметр `name` і виводить привітання у вигляді спливаючого повідомлення.
+function greetWithAlert(name) {
+  alert(name);
+};
+// Функція `processUserInput` приймає функцію `greeting` як параметр.
+// Вона викликає `prompt` для отримання імені користувача, а потім викликає передану функцію `greeting` з отриманим іменем.
+function processUserInput(greeting) {
+  let promptUserName = prompt('Please enter your name')
+  greeting(promptUserName);
+}
+// Виклик функції `processUserInput` з переданою функцією `greeting`.
+// Користувачу буде запропоновано ввести своє ім'я, після чого в консолі буде виведено привітання.
+processUserInput(greeting);
+// Виклик функції `processUserInput` з переданою функцією `greetWithAlert`.
+// Користувачу буде запропоновано ввести своє ім'я, після чого відобразиться спливаюче повідомлення з привітанням.
+processUserInput(greetWithAlert);
 
 
 
 
 
+// Функція `greaterThan` приймає параметр `n` і повертає нову функцію.
+// Повернена функція приймає параметр `m` і порівнює його зі значенням `n`.
+// Вона повертає `true`, якщо `m` більше за `n`, і `false` в іншому випадку.
+function greaterThan(n) {
+  return function (m) {
+    return m > n;
+  }
+}
+// Змінна `greaterThan10` отримує результат виклику функції `greaterThan` з аргументом 10.
+// Це створює нову функцію, яка порівнює свій аргумент зі значенням 10.
+let greaterThan10 = greaterThan(10);
+// Змінна `result` отримує результат виклику функції `greaterThan10` з аргументом 11.
+// Функція `greaterThan10` порівнює 11 зі значенням 10 і повертає `true`, оскільки 11 більше за 10.
+let result = greaterThan10(11);
+// Виведення значення змінної `result` у консолі.
+console.log(result);
+*/
+
+
+
+
+/*
+Домашнє завдання урок №18
+Напишіть функцію вищого порядку `modifyArray`, яка приймає масив та колбек-функцію. 
+Колбек-функція повинна застосовуватися до кожного елементу масиву.
+Потім протестуйте цю функцію, передавши їй масив чисел та колбек-функцію, 
+яка множить кожен елемент масиву на 2.
+
+
+// Функція вищого порядку, яка приймає масив та колбек-функцію
+function modifyArray(array, callbackFunction){
+  return array.map(callbackFunction);
+}
+// Колбек-функція, яка множить число на 2
+function multiplyByTwo(number){
+  return number * 2;
+}
+let numbers = [1, 2, 3, 4, 5];
+// Виклик функції modifyArray з передачею масиву numbers та колбек-функції multiplyByTwo
+let modifiedNumbers = modifyArray(numbers, multiplyByTwo);
+console.log(modifiedNumbers);
+*/
+
+
+
+/*
+Урок №19
+Як використовувати setTimeout та setInterval для асинхронного програмування
+
+// перший варіант
+setTimeout(function () {
+  console.log("Hello World");
+}, 3000);
+
+// другий варіант стрілкова функція
+setTimeout(() => {
+  console.log("Hello World");
+}, 3000);
+
+// приклад №1
+console.log("Before setTimeout")
+setTimeout(() => {
+  console.log("Inside setTimeout");
+}, 3000);
+console.log("After setTimeout");
+
+// приклад №2
+console.log("Before setTimeout")
+let a = setTimeout(() => {
+  console.log("Inside setTimeout");
+}, 10000);
+console.log("After setTimeout");
+*/
+
+/*
+приклад №3
+setInterval(()=>{
+console.log("Hello World")
+}, 2000)
+*/
+
+/*
+// приклад №4
+console.log("Before setTimeout")
+let newSet = setInterval(() => {
+  console.log("Inside setTimeout");
+}, 2000);
+console.log("After setTimeout");
+*/
+
+/*
+// приклад №5
+// Отримуємо елемент з ідентифікатором "timer" і зберігаємо його в змінній "timer"
+let timer = document.getElementById("timer");
+// Ініціалізуємо змінну "seconds" зі значенням 10
+let seconds = 10;
+// Задаємо текст вмісту елемента "timer" зі значенням змінної "seconds"
+timer.textContent = seconds;
+
+// Функція updateTimer оновлює лічильник таймера та перевіряє, чи досягнута нульова точка
+function updateTimer(){
+  // Зменшуємо значення змінної "seconds" на 1
+  seconds--;
+  // Змінюємо текст вмісту елемента "timer" на нове значення змінної "seconds"
+  timer.textContent = seconds;
+  // Перевіряємо, чи досягнута нульова точка
+  if(seconds === 0){
+    // Якщо досягнута нульова точка, змінюємо текст вмісту елемента "timer" на "Time is up"
+    timer.textContent = "Time is up";
+    // Зупиняємо інтервал оновлення таймера
+    clearInterval(timeout);
+  }
+}
+
+// Встановлюємо інтервал оновлення таймера на 1 секунду
+let timeout = setInterval(updateTimer, 1000);
+*/
+
+
+/*
+// приклад №6
+let clock = document.getElementById("clock");
+
+// Функція updateClock оновлює годинник, отримуючи поточну дату та час
+function updateClock() {
+  // Створюємо новий об'єкт Date для отримання поточної дати та часу
+  let date = new Date();
+
+  // Отримуємо години, хвилини та секунди з об'єкта date
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
+
+  // Додаємо нуль перед годинами, хвилинами та секундами, якщо вони менші за 10
+  hours = hours < 10 ? "0" + hours : hours;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+
+  // Задаємо текст вмісту елемента "clock" зі значенням годин, хвилин та секунд
+  clock.textContent = `${hours} : ${minutes} : ${seconds}`;
+}
+
+// Встановлюємо інтервал оновлення годинника на 1 секунду
+let interval = setInterval(updateClock, 1000);
+*/
 
 
 
 
 
+/*
+Домашнє завдання урок №18
+Напишіть функцію на JavaScript, яка використовує `setInterval` 
+для відображення лічильника зворотного відліку від 5 до 0. 
+Коли лічильник досягне нуля, він має вивести повідомлення "Лічильник завершено!" 
+і зупинити лічильник, використовуючи `clearInterval`.
+
+let timerDocument = document.getElementById("timer1"); // Отримати HTML-елемент з ідентифікатором "timer1" і присвоїти його значення змінній timerDocument
+let startTheCountdown = 5; // Ініціалізувати значення лічильника на 5
+timerDocument.textContent = startTheCountdown; // Встановити текстовий вміст елементу timerDocument зі значенням startTheCountdown
+
+function updateTimer() {
+  startTheCountdown--; // Зменшити значення лічильника на 1
+  timerDocument.textContent = startTheCountdown; // Оновити текстовий вміст елементу timerDocument з новим значенням лічильника
+
+  if (startTheCountdown === 0) { // Перевірити, чи значення лічильника дорівнює 0
+    timerDocument.textContent = "Лічильник завершено!"; // Встановити текстовий вміст елементу timerDocument на "Лічильник завершено!"
+    clearInterval(timeout); // Зупинити виконання інтервалу, очищаючи інтервал з ідентифікатором timeout
+  }
+}
+
+let timeout = setInterval(updateTimer, 1000); // Викликати функцію updateTimer кожні 1000 мілісекунд (1 секунда) і присвоїти ідентифікатор інтервалу змінній timeout
+*/
+
+
+
+/*
+Урок №20
+Як використовувати регулярні вирази для зіставлення зразків
+
+let pattern1 = /\d/i; // Регулярний вираз для збігу з будь-якою цифрою (\d) з ігноруванням регістру (i)
+let pattern2 = new RegExp("pattern"); // Регулярний вираз, створений за допомогою конструктора RegExp
+let text = "Hello World"; // Рядок, з яким будуть порівнюватися регулярні вирази
+let isMatch = pattern1.test(text); // Перевірка, чи збігається регулярний вираз pattern1 з текстом
+console.log(isMatch); // Виведення результату перевірки на консоль
+let matches = text.match(pattern1); // Пошук всіх збігів регулярного виразу pattern1 в тексті
+console.log(matches); // Виведення знайдених збігів на консоль
+*/
+
+// Основні символи регулярних виразів
+// i	Співставлення без урахування регістру
+// g	Виконати глобальне співставлення (знайти всі збіги, а не зупинятися після першого збігу)
+// m	Виконати багаторядкове співставлення
+// [abc]	Знайти будь-який символ в скобках
+// [0-9]	Знайти будь-яку з цифр в скобках
+// x|y)	Знайти будь-яку з альтернатив, розділених |
+// \d	Знайти цифру
+// \s	Знайти символ пробілу
+// \b	Знайти збіг на початку такого слова: \bWORD, або в кінці такого слова: WORD\b	
+
+/*
+Домашнє завдання урок №20
+Напишіть код на JavaScript, який використовує регулярний вираз для знаходження всіх 
+голосних букв у рядку. Використовуйте флаг `g` для пошуку усіх відповідностей.
+
+let vowelsTheOrder = /[aeiou]/g;
+let stringOfVowels = "This line contains vowels";
+let matches1 = stringOfVowels.match(vowelsTheOrder);
+console.log(matches1);
+*/
+
+
+
+
+
+/*
+Урок №21
+Як використовувати слухачі подій для реагування на дії користувачів
+*/
+/*
+let button = document.querySelector("#myButton"); // Вибираємо елемент з ідентифікатором "myButton" і зберігаємо його в змінну button
+button.addEventListener('click', (event) => { // Додаємо обробник події "click" до кнопки
+  alert("Button clicked"); // Виводимо спливаюче повідомлення "Button clicked"
+  console.log(event); // Виводимо об'єкт події на консоль
+})
+*/
+
+/*
+let button = document.getElementById("myButton"); // Вибираємо елемент з ідентифікатором "myButton" і зберігаємо його в змінну button
+button.addEventListener('click', function(){ // Додаємо обробник події "click" до кнопки
+  document.body.style.backgroundColor = "black"; // Змінюємо колір фону тіла документа на чорний
+})
+*/
+
+/*
+Домашнє завдання урок №21
+Напишіть код JavaScript, який додає прослуховувач події "click" 
+до кнопки з ідентифікатором "myButton". При кліку на кнопку, функція
+ має змінювати колір тексту на сторінці на синій.
+
+let button = document.getElementById("myButton"); // Вибираємо елемент з ідентифікатором "myButton" і зберігаємо його в змінну button
+button.addEventListener('click', () => { // Додаємо прослуховувач події "click" до кнопки
+  document.body.style.color = "blue"; // Змінюємо колір тексту на сторінці на синій
+});
+*/
+
+
+
+/*
+Урок №22
+Як використовувати API classList для додавання та видалення класів CSS
+
+let p = document.querySelector("p"); // Вибираємо перший елемент <p> на сторінці і зберігаємо його в змінну p
+p.classList.add("bold"); // Додаємо клас "bold" до елемента p
+console.log(p.classList); // Виводимо список класів елемента p на консоль
+
+
+
+document.getElementById("myButton").addEventListener("click", function(){ // Додаємо прослуховувач події "click" до елемента з ідентифікатором "myButton"
+  this.classList.toggle("red"); // Додаємо або видаляємо клас "red" у елемента, залежно від його наявності
+  this.classList.toggle("highlight"); // Додаємо або видаляємо клас "highlight" у елемента, залежно від його наявності
+})
+*/
+
+
+/*
+Домашнє завдання урок №22
+Напишіть код JavaScript, який додає клас 
+“highlighted” (з підкресленням) до елемента з ідентифікатором “myElement” 
+за умови, що цей клас ще не присутній у цьому елементі. Використайте 
+API classList для цього завдання.
+
+
+document.getElementById("myElement").addEventListener("click", function(){
+  this.classList.toggle("highlight")
+});
+*/
+
+
+/*
+Урок №23
+Розуміння обробки помилок та налагодження JavaScript
+*/
+/*
+// Приклад №1
+document.getElementById("myElement").addEventListener("click", function(){
+  this.classList.toggle("highlight")
+});
+try{
+  console.log(foo.bar)
+} catch (error){
+  console.log("We got an error:", error.name);
+  console.log(error.message);
+} finally {
+  console.log("Thanks for using our app")
+}
+console.log("Some text");
+*/
+
+
+/*
+Домашнє завдання урок №23
+Напишіть код у JavaScript, який демонструє використання оператора `throw` для створення власного винятку, 
+коли число є від'ємним. Використайте блок `try...catch`, щоб обробити цей виняток та вивести відповідне повідомлення у консоль.
+
+function checkPositive(number){
+  if(number <= 0){
+    throw new Error("The number must be positive"); // Викидаємо новий об'єкт помилки з повідомленням "The number must be positive", якщо число менше або дорівнює нулю
+  }
+  console.log("The number is positive:", number); // Виводимо повідомлення "The number is positive:" разом з числом
+}
+
+let a = -5; // Ініціалізуємо змінну a зі значенням -5
+
+try {
+  checkPositive(a); // Викликаємо функцію checkPositive з аргументом a
+} catch (err) {
+  console.log("Ops, something went wrong:", err.message); // Виводимо повідомлення "Ops, something went wrong:" разом з повідомленням про помилку, яке міститься в об'єкті помилки
+}
+*/
+
+
+/*
+Урок №24
+Як працювати з даними JSON
+*/
+
+/*
+Домашнє завдання урок №24
+Напишіть код на JavaScript, який створює об'єкт JavaScript із наступними властивостями: `name: "John", age: 28, hobbies: 
+["swimming", "reading"]`. Потім використовуйте метод `JSON.stringify()`, щоб перетворити цей об'єкт на рядок у форматі JSON, 
+і виведіть цей рядок у консоль.
+
+let person = {
+  "name": "John", // Властивість "name" зі значенням "John"
+  "age": 28, // Властивість "age" зі значенням 28
+  "hobbies": ["swimming", "reading"] // Властивість "hobbies" з масивом значень ["swimming", "reading"]
+}; 
+
+let json = JSON.stringify(person); // Перетворюємо об'єкт person в рядок у форматі JSON за допомогою методу JSON.stringify()
+console.log(json); // Виводимо отриманий рядок у консоль
+*/
+
+
+
+
+/*
+Урок №25
+Як використовувати AJAX для виконання асинхронних HTTP-запитів
+
+let container = document.getElementById("products"); // Отримуємо посилання на елемент з id "products"
+let xhr = new XMLHttpRequest(); // Створюємо новий об'єкт XMLHttpRequest
+xhr.open("GET", 'https://dummyjson.com/products'); // Встановлюємо метод та URL для запиту
+xhr.send(); // Відправляємо запит на сервер
+
+xhr.onload = function () {
+  if (xhr.status === 200) { // Перевіряємо статус відповіді
+    const data = JSON.parse(xhr.responseText); // Розпарсюємо отримані дані з формату JSON
+    const products = data.products; // Отримуємо масив продуктів з отриманих даних
+
+    for (let i = 0; i < products.length; i++){ // Проходимося по кожному продукту
+      let product = products[i]; // Отримуємо поточний продукт
+
+      let element = document.createElement("div"); // Створюємо новий елемент div
+      element.className = "product"; // Встановлюємо клас елементу
+      element.innerHTML = `
+      <h3>${product.title}</h3> // Встановлюємо заголовок з назвою продукту
+      <h3>${product.price}</h3> // Встановлюємо заголовок з ціною продукту
+      <h3>${product.rating}</h3> // Встановлюємо заголовок з рейтингом продукту
+      `;
+      container.appendChild(element); // Додаємо елемент до контейнера
+    }
+  } else {
+    console.log("Error fetching data"); // Виводимо повідомлення про помилку отримання даних
+  }
+}
+*/
+
+/*
+Домашнє завдання урок №25
+Напишіть JavaScript код, який використовує AJAX для отримання даних з URL "https://dummyjson.com/products". 
+Використовуйте XMLHttpRequest для створення запиту.
+У випадку успішної відповіді виведіть отримані дані у консоль, у разі помилки - виведіть повідомлення про помилку.
+
+let container = document.getElementById("products"); // Отримуємо посилання на елемент з id "products"
+let xhr = new XMLHttpRequest(); // Створюємо новий об'єкт XMLHttpRequest
+xhr.open("GET", 'https://dummyjson.com/products'); // Встановлюємо метод та URL для запиту
+xhr.send(); // Відправляємо запит на сервер
+
+xhr.onload = function () {
+  if (xhr.status === 200) { // Перевіряємо статус відповіді
+    const data = JSON.parse(xhr.responseText); // Розпарсюємо отримані дані з формату JSON
+    console.log(data);
+    const products = data.products; // Отримуємо масив продуктів з отриманих даних
+  } else {
+    console.log("Error fetching data"); // Виводимо повідомлення про помилку отримання даних
+  }
+}
+*/
+
+
+
+
+
+/*
+Урок №26
+Як використовувати проміси та asyncawait для асинхронного програмування
+*/
+
+/*
+// приклад №1 з використанням методу .then
+let checkWeather = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    if (Math.random() > 0.5) {
+      resolve("Sunny"); // Виклик resolve, якщо отримано дані про погоду
+    } else {
+      reject("Failed to get weather data"); // Виклик reject у разі помилки отримання даних
+    }
+  }, 2000)
+});
+checkWeather
+.then(weather => console.log(`Weather is: ${weather}`))
+.catch(error => console.log(`Error: ${error}`));
+*/
+
+/*
+// приклад №2 з використанням async await
+// Ця функція використовує async await для отримання поточної погоди
+async function getWeather(){
+  // Спроба отримати погоду
+  try {
+    // За допомогою функції checkWeather отримаємо погоду
+    let weather = await checkWeather;
+    // Виведемо погоду на консоль
+    console.log(`Weather is: ${weather}`)
+  } catch (error) {
+    // У разі помилки виведемо її на консоль
+    console.log(`Error: ${error}`)
+  }
+}
+// Виклик функції
+getWeather();
+*/
+
+
+
+/*
+Домашнє завдання урок №26
+Напишіть функцію на JavaScript, яка використовує Promise для імітації 
+перевірки стану з'єднання з інтернетом. Функція повинна повертати 
+"З'єднання є" або "З'єднання відсутнє", в залежності від результату 
+перевірки. Використовуйте async/await для обробки результату Promise.
+
+// Ця функція імітує перевірку з'єднання з інтернетом.
+// Вона повертає Promise, який містить результат перевірки.
+let checKonnect = new Promise((resolve, reject) => {
+  // Затримка на 2 секунди
+  setTimeout(() => {
+    // Якщо випадкове число більше 0.5,
+    // то з'єднання є, і функція resolve() повертає "З'єднання є".
+    if (Math.random() > 0.5) {
+      resolve("З'єднання є");
+    } else {
+      // Інакше з'єднання відсутнє, і функція reject() повертає "З'єднання відсутнє".
+      reject("З'єднання відсутнє");
+    }
+  }, 2000);
+});
+
+// Ця функція використовує async/await для обробки результату Promise,
+// поверненого функцією checKonnect().
+async function internetConnectionStatus() {
+  // Спроба отримати результат перевірки з'єднання.
+  try {
+    // Результат перевірки зберігається в змінній connect.
+    let connect = await checKonnect;
+    // Результат перевірки виводиться на консоль.
+    console.log(connect);
+  } catch (error) {
+    // У разі помилки виводиться повідомлення про неї.
+    console.log(error);
+  }
+}
+
+// Виклик функції internetConnectionStatus().
+internetConnectionStatus();
+*/
+
+/*
+Урок №27
+Як використовувати API fetch для виконання HTTP-запитів
+*/
+
+/*
+// приклад №1
+fetch("https://dummyjson.com/users/1")
+  .then(response => {
+    if (response.ok){
+      return response.json();
+    } else {
+      throw new Error("Something went wrong")
+    }
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+*/
+
+/*
+// приклад №2
+  const newUser = {
+    firstName: "John",
+    lastName: "Doe",
+    username: "johndoe",
+    email: "jondoe@gmail.com"
+  };
+
+  
+  // вариант №1
+  fetch('https://dummyjson.com/users/add', {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(newUser)
+  })
+  .then(response => {
+    if (response.ok){
+      return response.json();
+    } else {
+      throw new Error("Something went wrong")
+    }
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
+
+  // вариант №2
+// Ця функція використовується для створення нового користувача за допомогою POST-запиту.
+async function createUser() {
+  try {
+    // Відправка POST-запиту на API-endpoint для створення користувача
+    let response = await fetch('https://dummyjson.com/users/add', {
+      // Використання методу POST
+      method: "POST",
+      // Зазначення заголовків запиту
+      headers: {
+        // Встановлення Content-Type на JSON, оскільки ми відправляємо дані в JSON-форматі
+        "Content-Type": "application/json"
+      },
+      // Включення даних користувача в тіло запиту в JSON-форматі
+      body: JSON.stringify(newUser)
+    });
+ 
+    // Перевірка успішності відповіді
+    if (response.ok) {
+      // Отримання даних з відповіді в форматі JSON
+      let data = await response.json();
+      // Виведення даних на консоль
+      console.log(data);
+    } else {
+      // Якщо відповідь не успішна, кидається помилка
+      throw new Error("Something went wrong");
+    }
+  } catch (error) {
+    // Обробка можливих помилок під час виконання запиту
+    console.log(error);
+  }
+ }
+ // Виклик функції для створення користувача
+ createUser();
+ */
+
+
+/*
+Домашнє завдання урок №27
+Напишіть функцію на JavaScript, яка використовує Fetch API для 
+виконання POST-запиту для створення нового користувача на сервері. 
+Використовуйте URL `https://dummyjson.com/users/add` 
+і передайте наступні дані 
+користувача у тілі запиту: `firstName: "Ivan", lastName: "Ivanov", username: "ivanivanov", 
+email: "ivanivanov@example.com"`. Функція повинна обробляти відповідь сервера і виводити результат у консоль.
+*/
+const newUser = {
+  firstName: "Ivan",
+  lastName: "Ivanov",
+  username: "ivanivanov",
+  email: "ivanivanov@example.com"
+};
+
+async function createUser() {
+  try {
+    // Відправка POST-запиту на API-endpoint для створення користувача
+    let response = await fetch('https://dummyjson.com/users/add', {
+      // Використання методу POST
+      method: "POST",
+      // Зазначення заголовків запиту
+      headers: {
+        // Встановлення Content-Type на JSON, оскільки ми відправляємо дані в JSON-форматі
+        "Content-Type": "application/json"
+      },
+      // Включення даних користувача в тіло запиту в JSON-форматі
+      body: JSON.stringify(newUser)
+    });
+ 
+    // Перевірка успішності відповіді
+    if (response.ok) {
+      // Отримання даних з відповіді в форматі JSON
+      let data = await response.json();
+      // Виведення даних на консоль
+      console.log(data);
+    } else {
+      // Якщо відповідь не успішна, кидається помилка
+      throw new Error("Something went wrong");
+    }
+  } catch (error) {
+    // Обробка можливих помилок під час виконання запиту
+    console.log(error);
+  }
+ }
+ // Виклик функції для створення користувача
+ createUser();

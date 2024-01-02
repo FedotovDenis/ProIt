@@ -8,16 +8,25 @@
 </head>
 
 <body>
-    <h1 id="main">Hello World</h1>
-    <p>This is a paragraph 1</p>
-    <p>This is a paragraph 2</p>
-    <p>This is a paragraph 3</p>
-    <ul>
-        <li class="item">Item 1</li>
-        <li class="item">Item 1</li>
-        <li class="item">Item 1</li>
-    </ul>
+    <h1 id="title">Hello World</h1>
+    <div id="container">
+        <p id="paragraph">This is a paragraph 1</p>
+        <p id="paragraph1">This is a paragraph 2</p>
+        <p class="hobbits">This is a paragraph 3</p>
+        <p class="hobbits">This is a paragraph 4</p>
+        <p class="hobbits">This is a paragraph 5</p>
+        <ul id="list">
+            <li class="item">Item 1</li>
+            <li class="item">Item 2</li>
+            <li class="item">Item 3</li>
+        </ul>
+    </div>
+
     <script>
+
+        /*
+        Урок №14
+        
         // Змінюємо текст заголовка з id "main" на "Hello Dom"
         let mainHeading = document.querySelector("#main");
         mainHeading.textContent = "Hello Dom";
@@ -27,19 +36,143 @@
         for (let item of items) {
             item.style.backgroundColor = "yellow";
         }
+        */
 
 
-        /* 
+
+        /*
         Домашнє завдання урок №14
         Напишіть код JavaScript, який знаходить всі елементи `<p>` на сторінці та 
         змінює їх колір тексту на синій. Використовуйте метод `document.querySelectorAll()` та цикл для внесення змін.
-        */
+        
 
         // Знаходимо всі елементи <p> на сторінці та змінюємо колір тексту на синій
         let paragraphs = document.querySelectorAll("p");
         for (let paragraph of paragraphs) {
             paragraph.style.color = "blue";
         }
+        */
+
+
+
+        /*
+        Урок №15
+        Як обходити DOM для вибору та маніпуляції елементами
+        
+
+        // Знаходимо елемент з ідентифікатором 'main' і змінюємо його стиль рамки на пунктирний
+        let myElement = document.getElementById('main');
+        myElement.style.borderStyle = 'dotted';
+
+        // Знаходимо всі елементи з класом 'item' і змінюємо їх стиль рамки на пунктирний
+        let myElement1 = document.getElementsByClassName('item');
+        for (let element of myElement1) {
+            element.style.borderStyle = 'dotted';
+        }
+
+        // Знаходимо всі елементи <p> і змінюємо їх стиль рамки на пунктирний
+        let myElement2 = document.getElementsByTagName('p');
+        for (let element of myElement1) {
+            element.style.borderStyle = 'dotted';
+        }
+
+        // Знаходимо елемент з ідентифікатором 'list' і змінюємо стиль рамки його батька на пунктирний
+        let myElement3 = document.getElementById('list');
+        myElement3.parentNode.style.borderStyle = 'dotted';
+
+        // Знаходимо елемент з ідентифікатором 'paragraph' і змінюємо його стиль рамки на пунктирний
+        let myElement4 = document.getElementById('paragraph');
+        myElement4.style.borderStyle = 'dotted';
+        myElement4.textContent = 'My changed paragraph';// Також змінюємо текстовий вміст елемента на 'My changed paragraph'
+
+        // Знаходимо елемент з ідентифікатором 'paragraph1' і змінюємо його стиль рамки на пунктирний
+        let myElement5 = document.getElementById('paragraph1');
+        myElement5.style.borderStyle = 'dotted';
+        myElement5.innerHTML = "<a hrtef='#'>Link</a>";// Також змінюємо HTML вміст елемента на '<a hrtef='#'>Link</a>'
+        */
+
+
+        /*
+        Домашнє завдання урок №15
+        Напишіть JavaScript-код, який змінить текст всіх елементів з класом "hobbits" на "Гобіти Ширу". 
+        Використайте метод `getElementsByClassName` та властивість `textContent`.
+        
+        let myElement6 = document.getElementsByClassName('hobbits');
+        for (let element of myElement6) {
+            element.textContent = 'Гобіти Ширу'; // Змінюємо текст елемента на "Гобіти Ширу"
+        }
+        */
+
+        /*
+Урок №16
+Як динамічно створювати та видаляти елементи HTML
+
+
+        // Створюємо новий елемент <p> і задаємо йому текстовий вміст
+        let newParagraph = document.createElement('p');
+        newParagraph.textContent = 'This is a new paragraph';
+        // Знаходимо контейнер з ідентифікатором 'container'
+        let container = document.getElementById('container');
+        // Додаємо новий елемент <p> до контейнера
+        container.appendChild(newParagraph);
+
+
+
+        // Створюємо новий елемент <li> і задаємо йому текстовий вміст
+        let newListItem = document.createElement('li');
+        newListItem.textContent = 'Item 1.5';
+        // Знаходимо список з ідентифікатором 'list'
+        let list = document.getElementById('list');
+        // Знаходимо другий елемент <li> у списку
+        let secondListItem = list.children[1];
+        // Вставляємо новий елемент <li> перед другим елементом <li> у списку
+        list.insertBefore(newListItem, secondListItem);
+
+
+
+        // Створюємо новий елемент <h1> і задаємо йому текстовий вміст
+        let newHeading = document.createElement('h1');
+        newHeading.textContent = 'Updated JavaScript Lesson';
+        // Знаходимо тіло документа
+        let body = document.body;
+        // Знаходимо старий елемент <h1> з ідентифікатором 'title'
+        let oldHeading = document.getElementById('title');
+        // Замінюємо старий елемент <h1> на новий елемент <h1> у тілі документа
+        body.replaceChild(newHeading, oldHeading);
+*/
+
+/*
+Домашнє завдання урок №16
+Напишіть код JavaScript для додавання нового елемента списку з текстом "Новий елемент" 
+в кінець існуючого списку "ul" з ідентифікатором "list".
+ 
+        // Створюємо новий елемент <li> і задаємо йому текстовий вміст
+        let newListItem = document.createElement('li');
+        newListItem.textContent = 'This new Item 4';
+        // Знаходимо список з ідентифікатором 'list'
+        let identifierList = document.getElementById('list');
+        // Додаємо новий елемент <li> до кінця списку
+        identifierList.appendChild(newListItem);
+*/ 
+
+
+
+
+/*
+Домашнє завдання урок №17
+Як працювати з датами та часом за допомогою об'єкта Date.
+Напишіть код на JavaScript, який створює об’єкт `Date` 
+для вашого дня народження цього року та виводить рядок з його датою у 
+форматі "ДД-ММ-РРРР". Використовуйте метод `toLocaleDateString()` 
+для форматування дати.
+*/  
+
+let myBirthday = new Date('2023-07-21');
+console.log(myBirthday.toLocaleDateString());
+
+
+
+
 
 
 

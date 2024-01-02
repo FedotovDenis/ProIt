@@ -1,17 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!--Урок №22 JavaScript
+    <style>
+        .blue{
+            background-color: lightblue;
+        }
+        .red{
+            background-color: lightcoral;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .highlight{
+            border: 2px solid red;
+        }
+    </style>
+-->
+
+
+
+
+    <!--приклад урок №25 JavaScript-->
+<style>
+    .product {
+        border: 1px solid white; /* Встановлюємо рамку з білим кольором */
+        margin: 10px; /* Встановлюємо зовнішні відступи */
+        padding: 10px; /* Встановлюємо внутрішні відступи */
+        width: 200px; /* Встановлюємо ширину елемента */
+        box-shadow: 0 0 10px rgba(145, 158, 127, 0.5); /* Встановлюємо тінь з використанням rgba() */
+    }
+
+    .product h3 {
+        margin: 0; /* Встановлюємо зовнішні відступи для заголовків h3 */
+    }
+
+    .product p {
+        margin: 0; /* Встановлюємо зовнішні відступи для абзаців p */
+        color: rgb(22, 30, 23); /* Встановлюємо колір тексту */
+    }
+
+    .product h3:nth-child(2)::before {
+        content: "$"; /* Додаємо знак долара перед другим елементом h3 */
+    }
+</style>
+
+    </style>
 </head>
+
+
+
+
 <body>
+
+    <!--приклад урок №19 JavaScript-->
+    <div id="timer">Timer</div>
+
+    <!--приклад урок №19 JavaScript-->
+    <div id="clock">Timer</div>
+
+    <!--домашне завданя урок №19 JavaScript-->
+    <div id="timer1">Timer</div>
+
+    <!--приклад урок №21 JavaScript-->
+    <button id="myButton">Click me</button>
+
+    <!--Урок №22 JavaScript-->
+    <button id="myButton">Click me</button>
+
+    <p>Домашнє завдання урок №21
+        Напишіть код JavaScript, який додає прослуховувач події "click"
+        до кнопки з ідентифікатором "myButton". При кліку на кнопку, функція
+        має змінювати колір тексту на сторінці на синій.</p>
+
+
+
+    <!--приклад урок №22 JavaScript-->
+    <p class="example blue">Sample text</p>
+
+
+
+    <!--приклад урок №25 JavaScript-->
+    <div id="products"></div>
+
+
+
     <!--<button onclick="great()">Click me</button>-->
-    
+
     <!-- Вбудований спосіб javascript-->
     <!--<button onclick="alert('Hello worlg')">Click me</button>-->
 
-    
+
 
 
     <!-- 
@@ -21,7 +105,7 @@
         а при натисканні на другу - виводиться поточна дата та час. Використовуйте внутрішній 
         та зовнішній JavaScript відповідно. 
     -->
-    
+
     <!-- Внутрішній спосіб javascript
     <script>alert("Привіт, світ!")</script>
 -->
@@ -29,7 +113,8 @@
     <script defer src="script.js"></script>
 -->
 
-<script defer src="script.js"></script>
+    <script defer src="script.js"></script>
 
 </body>
+
 </html>
