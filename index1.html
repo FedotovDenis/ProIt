@@ -28,29 +28,42 @@
 
     <!--приклад урок №25 JavaScript-->
 <style>
+/*
     .product {
+        border: 1px solid white; /* Встановлюємо рамку з білим кольором *
+        margin: 10px; /* Встановлюємо зовнішні відступи *
+        padding: 10px; /* Встановлюємо внутрішні відступи *
+        width: 200px; /* Встановлюємо ширину елемента *
+        box-shadow: 0 0 10px rgba(145, 158, 127, 0.5); /* Встановлюємо тінь з використанням rgba() *
+    }
+
+    .product h3 {
+        margin: 0; /* Встановлюємо зовнішні відступи для заголовків h3 *
+    }
+
+    .product p {
+        margin: 0; /* Встановлюємо зовнішні відступи для абзаців p *
+        color: rgb(22, 30, 23); /* Встановлюємо колір тексту *
+    }
+
+    .product h3:nth-child(2)::before {
+        content: "$"; /* Додаємо знак долара перед другим елементом h3 *
+    }
+*/
+    #product {
         border: 1px solid white; /* Встановлюємо рамку з білим кольором */
         margin: 10px; /* Встановлюємо зовнішні відступи */
         padding: 10px; /* Встановлюємо внутрішні відступи */
         width: 200px; /* Встановлюємо ширину елемента */
+        height: 200px;
         box-shadow: 0 0 10px rgba(145, 158, 127, 0.5); /* Встановлюємо тінь з використанням rgba() */
+        background-color: aquamarine;
+        border-radius: 50%;
     }
 
-    .product h3 {
-        margin: 0; /* Встановлюємо зовнішні відступи для заголовків h3 */
-    }
-
-    .product p {
-        margin: 0; /* Встановлюємо зовнішні відступи для абзаців p */
-        color: rgb(22, 30, 23); /* Встановлюємо колір тексту */
-    }
-
-    .product h3:nth-child(2)::before {
-        content: "$"; /* Додаємо знак долара перед другим елементом h3 */
-    }
 </style>
 
-    </style>
+    
 </head>
 
 
@@ -86,7 +99,7 @@
 
 
     <!--приклад урок №25 JavaScript-->
-    <div id="products"></div>
+    <div id="product"></div>
 
 
 
@@ -113,8 +126,85 @@
     <script defer src="script.js"></script>
 -->
 
-    <script defer src="script.js"></script>
+    <!--Урок №39
+Розуміння замикань JavaScript-->
+        <button id="increaseButton">increase Button</button>
+        <button id="decreaseButton">decrease button</button>
+        <p id="display">0</p>
 
+
+
+    <script defer type="module" src="script.js"></script>
+    <!-- <script defer type="module" src="app.js"></script>       Домашне завдання №43 JavaScript-->
+
+    <!-- Розуміння інтернаціоналізації та локалізації JavaScript, Урок №48 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.7.16/i18next.js" integrity="sha512-ZiLvEuhclIaAavAgPs8VXiKNBLgGFUrx8EWmldt2ezKPpicIrv1rlyQeJhuTS0X5I1+8gOw3f7vXy1vW1I4amg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        i18next.init({
+            resources: {
+                en: {
+                    translation: {
+                        "welcome": "Welcome!",
+                        "login": "Login",
+                    },
+                },
+                es: {
+                    translation: {
+                        "welcome": "Bienvanito!",
+                        "login": "Iniclar sesion",
+                    },
+                },
+                uk: {
+                    translation: {
+                        "welcome": "Ласкаво просимо!",
+                        "login": "Запрошуємо",
+                    },
+                },
+                
+            }
+        });
+
+        const lng = { lng: "uk"}
+
+        const welcomeText = i18next.t("welcome", lng );
+        console.log(welcomeText);
+        console.log(i18next.t("login", lng))
+    </script>
+    -->
+
+
+
+
+    <!-- Розуміння інтернаціоналізації та локалізації JavaScript, Урок №48 -->
+
+    <!-- Домашне завдання №48 JavaScript. Напишіть фрагмент коду на JavaScript, який використовує бібліотеку i18next 
+        для перекладу тексту "Ласкаво просимо!" на англійську мову, використовуючи вже 
+        надані ресурси у скрипті уроку. 
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.7.16/i18next.js" integrity="sha512-ZiLvEuhclIaAavAgPs8VXiKNBLgGFUrx8EWmldt2ezKPpicIrv1rlyQeJhuTS0X5I1+8gOw3f7vXy1vW1I4amg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        i18next.init({
+            resources: {
+                uk: {
+                    translation: {
+                        "welcome": "Ласкаво просимо!"
+                    },
+                },
+                en: {
+                    translation: {
+                        "welcome": "Welcome!",
+                    },
+                },
+                
+            }
+        });
+
+        const lng = { lng: "en"}
+
+        const welcomeText = i18next.t("welcome", lng );
+        console.log(welcomeText);
+        </script>
+        -->
 </body>
 
 </html>
